@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu_context_config>
+	<!-- 主菜单配置 -->
+	<menus_config type="mainMenu">
+		<!-- 一级别菜单:系统配置 -->
+		<menu id="system_config" text="系统管理" authKey="system_config">
+			<menu id="menu_config" text="菜单管理"
+				href="/mainframe/toQueryAllMenuItemTreeList.action" authKey="menu_config"
+				target="mainTabs" selectRefresh="false" />
+			<menu id="config_configuration" text="配置项管理"
+				href="/configuration/toQueryConfigProperty.action" authKey="config_config"
+				target="mainTabs" selectRefresh="false" />
+			<menu id="system_monitor" text="系统监控" authKey="system_monitor_view"
+				target="mainTabs" selectRefresh="false">
+				<menu id="druid_monitor_result" text="druid监控视图" href="/druid"></menu>
+				<menu id="JavaMelody_monitor_result" text="JavaMelody监控视图"
+					href="/monitoring"></menu>
+			</menu>
+			<menu id="basicdata_config" text="基础数据项管理" authKey="basicdata_config"
+				target="mainTabs" selectRefresh="false">
+				<menu id="district_manange" text="区域数据"></menu>
+			</menu>
+			<menu id="operator_config_center" text="操作员管理中心" target="mainTabs"
+				authKey="operator_config_center">
+				<menu id="virtualCenter_config" text="虚中心管理" authKey="virtualCenter_manage"
+					href="/virtualCenter/toQueryVirtualCenterList.action" target="mainTabs"></menu>
+				<menu id="postType_config" text="职位类型管理" authKey="postType_manage"
+					href="/postType/toQueryPostTypeList.action" target="mainTabs"></menu>
+				<menu id="organization_config" text="组织结构管理" authKey="organization_manage"
+					href="/organization/toQueryOrganizationList.action" target="mainTabs"></menu>
+				<menu id="post_config" text="职位管理" href="/post/toQueryPostList.action"
+					authKey="post_manage" target="mainTabs"></menu>
+				<menu id="operator_config" text="操作员管理"
+					href="/operator/toQueryOperatorList.action" authKey="operator_manage"
+					target="mainTabs"></menu>
+				<menu id="auth_config" text="权限管理" href="/auth/toQueryAuthView.action"
+					authKey="auth_manage" target="mainTabs"></menu>
+			</menu>
+			<menu id="servicelog_query_center" text="业务日志查询" target="mainTabs"
+				authKey="servicelog_query_center">
+				<menu id="query_login_log" text="登录日志"
+					href="/servicelog/mainframe/loginLog/toQueryLoginLogPagedList.action"
+					target="mainTabs"></menu>
+				<menu id="query_systemOper_log" text="系统操作日志"
+					href="/servicelog/mainframe/systemOperateLog/toQuerySystemOperateLogPagedList.action"
+					target="mainTabs"></menu>
+			</menu>
+		</menu>
+		<menu id="control_panel" text="控制面板">
+			<menu id="MyCalandar" text="行事历"></menu>
+			<menu id="Notepad" text="记事本"></menu>
+			<menu id="modify_password" text="修改密码"></menu>
+			<menu id="modify_myself_info" text="修改个人信息"></menu>
+			<menu id="my_post" text="我的职位"></menu>
+			<menu id="my_auth" text="我的权限"></menu>
+		</menu>
+		<menu id="logout_center" text="注销">
+			<menu id="lock_window" text="锁定窗口"></menu>
+			<menu id="re_login" text="重新登录"></menu>
+			<menu id="logout" text="退出系统" target="triggerGlobalEvent"
+				eventType="logout"></menu>
+		</menu>
+	</menus_config>
+</menu_context_config>

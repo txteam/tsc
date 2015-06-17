@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 操作权限 -->
+<auths>
+	<authType key="AUTHTYPE_OPERATE" name="操作权限">
+		<!-- 组织职位数据相关权限 -->
+		<auth key="system_config" name="系统管理权限">
+			<auth key="menu_config" name="菜单管理"></auth>
+			<auth key="config_config" name="配置项管理"></auth>
+			<auth key="basicdata_config" name="基础数据项管理"></auth>
+			<auth key="operator_config_center" name="操作员管理中心">
+				<auth key="post_manage" name="职位管理"></auth>
+				<auth key="operator_manage" name="操作员管理"></auth>
+				<auth key="auth_manage" name="权限管理"></auth>
+			</auth>
+		</auth>
+	</authType>
+</auths>
